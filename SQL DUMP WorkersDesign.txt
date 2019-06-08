@@ -1,0 +1,107 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Aug 15, 2018 at 11:06 AM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.1.18
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `workersdesign`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail_post`
+--
+
+CREATE TABLE `detail_post` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `view` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `detail_post`
+--
+
+INSERT INTO `detail_post` (`id`, `slug`, `description`, `image`, `view`, `created_at`, `updated_at`) VALUES
+(1, 'app-service-car-wallpapers-hd', 'Cars Wallpapers HD is app to help you get car wallpaper with high-quality wallpaper and this app specially designed for big fan of car./The set wallpaper page is the page for the user to view wallpaper details and change the wallpaper view. The set wallpaper page consists of wallpaper images, background images with blur effects, and the button set wallpaper. If the user wants to change the wallpaper on Android device, the user must press the set wallpaper button in the set wallpaper page./Categories page is a page for user to see all category on this app. Categories page consists of category name, and the number of images. If user want to see the category, user must click the category name./This is an example of an image that is inside the app', 'App-Service-Car-Wallpapers-HD-1.jpg,App-Service-Car-Wallpapers-HD-2.jpg,App-Service-Car-Wallpapers-HD-3.jpg,App-Service-Car-Wallpapers-HD-4.jpg', 577, '2018-07-22 17:00:00', '2018-08-14 08:02:19'),
+(2, 'web-service-download-apk-for-android', 'Download APK for Android is an easy way to find and download your favourite apk file./You can find your favourite apk in out multimillion database of apk file./We provide fast and relevant search./You can also post apk file in your blog or personal site, hope you enjoy staying here.', 'Web-Service-Download-APK-For-Android-1.jpg,Web-Service-Download-APK-For-Android-2.jpg,Web-Service-Download-APK-For-Android-3.jpg,Web-Service-Download-APK-For-Android-4.jpg', 59, '2018-07-28 17:00:00', '2018-08-11 10:27:52'),
+(3, 'design-service-logo-myproperty', 'MyProperty is a company at property field, buy and sell property in indonesia./The founder of MyProperty make collaboration with me, to make some design such as logo and name card.', 'Design-Service-Logo-MyProperty-1.jpg,Design-Service-Logo-MyProperty-2.jpg', 34, '2018-07-29 17:00:00', '2018-08-12 07:53:59'),
+(4, 'app-service-anime-wallpapers-hd', 'Anime Wallpapers (Full HD Backgrounds) is app to help you get Anime Wallpapers with High-Quality Wallpapers./This app specially designed for big fan of anime, if you are Anime Lovers, this app very recommended for you./This app have a fast loading Anime Wallpapers search based on light-weight request to server./No limit Anime Wallpapers Search that you can download as many Anime Wallpapers as you like, whenever you want.', 'App-Service-Anime-Wallpapers-HD-1.jpg,App-Service-Anime-Wallpapers-HD-2.jpg,App-Service-Anime-Wallpapers-HD-3.jpg,App-Service-Anime-Wallpapers-HD-4.jpg', 21, '2018-07-29 17:00:00', '2018-08-11 10:27:57'),
+(5, 'web-service-front-office-hotel', 'Front office hotel is a web administrator for the hotel management./This app is very helpful to handling and management hotel./The front office application is an application that contains the activities transactions of the hotel room, hotel facilities, customer check-in & check-out and customer payment./The officer can handling by division such as inputting room data, hotel check-in & check-out, and other parts because this app already support group permissions.', 'Web-Service-Front-Office-Hotel-1.jpg,Web-Service-Front-Office-Hotel-2.jpg,Web-Service-Front-Office-Hotel-3.jpg,Web-Service-Front-Office-Hotel-4.jpg', 11, '2018-07-30 17:00:00', '2018-08-12 08:04:18'),
+(6, 'design-service-logo-costaville', 'Costaville Residence is a company engaged in home sales./They made cooperation with us because they wanted to make a logo./Costaville Residence has a logo concept that is easy to remember.', 'Design-Service-Logo-Costaville-1.jpg,Design-Service-Logo-Costaville-2.jpg,Design-Service-Logo-Costaville-3.jpg', 15, '2018-07-30 17:00:00', '2018-08-15 01:35:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts`
+--
+
+CREATE TABLE `posts` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subtitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `year` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `title`, `subtitle`, `slug`, `image`, `year`, `created_at`, `updated_at`) VALUES
+(1, 'Car Wallpapers HD', 'app', 'app-service-car-wallpapers-hd', 'App-Service-Car-Wallpapers-HD.jpg', '2017', '2018-07-18 20:15:15', '2018-07-19 04:21:32'),
+(2, 'Download APK for Android', 'web', 'web-service-download-apk-for-android', 'Web-Service-Download-APK-for-Android.jpg', '2014', '2018-07-19 17:00:00', '2018-07-19 17:00:00'),
+(3, 'Logo MyProperty', 'design', 'design-service-logo-myproperty', 'Design-Service-Logo-MyProperty.jpg', '2013', '2018-07-19 17:00:00', '2018-07-19 17:00:00'),
+(4, 'Anime Wallpapers HD', 'app', 'app-service-anime-wallpapers-hd', 'App-Service-Anime-Wallpapers-HD.jpg', '2017', '2018-07-19 17:00:00', '2018-07-19 17:00:00'),
+(5, 'Front Office Hotel', 'web', 'web-service-front-office-hotel', 'Web-Service-Front-Office-Hotel.jpg', '2015', '2018-07-19 17:00:00', '2018-07-19 17:00:00'),
+(6, 'Logo Costaville', 'design', 'design-service-logo-costaville', 'Design-Service-Logo-Costaville.jpg', '2012', '2018-07-19 17:00:00', '2018-07-19 17:00:00');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `detail_post`
+--
+ALTER TABLE `detail_post`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `detail_post`
+--
+ALTER TABLE `detail_post`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
